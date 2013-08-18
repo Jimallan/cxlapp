@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:javaee="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-app_2_4.xsd" version="2.4">
+  <javaee:display-name>Renren Website Demo for a Tutorial</javaee:display-name>
+  
+  <servlet>
+    <servlet-name>Feed2Servlet</servlet-name>
+    <servlet-class>com.cxlapp.website.Feed2Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Feed2Servlet</servlet-name>
+    <url-pattern>/feed2</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Request2Servlet</servlet-name>
+    <servlet-class>com.cxlapp.website.Request2Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Request2Servlet</servlet-name>
+    <url-pattern>/request2</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.cxlapp.website.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ProfileServlet</servlet-name>
+    <servlet-class>com.cxlapp.website.ProfileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProfileServlet</servlet-name>
+    <url-pattern>/profile</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.cxlapp.website.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+	<servlet-name>RenrenLoginServlet</servlet-name>
+	<servlet-class>com.cxlapp.website.RenrenLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>RenrenLoginServlet</servlet-name>
+	<url-pattern>/rr_login</url-pattern>
+  </servlet-mapping>
+  
+  <listener>
+    <javaee:listener-class>com.cxlapp.website.ApiInitListener</javaee:listener-class>
+  </listener>
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <error-page>
+    <error-code>404</error-code>
+    <location>/404.html</location>
+  </error-page>
+</web-app>

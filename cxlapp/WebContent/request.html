@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Renren Website Demo -- Request</title>
+  <script type="text/javascript" src="/js/renren_js_sdk/renren.js"></script>
+  <script type="text/javascript">
+    function sendRequest() {
+	  var uiOpts = {
+		  url : "request",
+		  display : "popup",
+		  params : {
+		    "accept_url":"http://cxlapp.com/request.html",//接受邀请按钮url
+                    "redirect_uri":"http://cxlapp.com/redirect.html",//点击确定或取消后跳转的url
+		    "accept_label":"接受",
+		    "actiontext":"邀请好友一起来玩"
+		  },
+		  onSuccess: function(r){},
+		  onFailure: function(r){} 
+	  };
+	  Renren.ui(uiOpts);
+	}
+  </script>
+</head>
+<body>
+  <script type="text/javascript">Renren.init({appId:239608});</script>
+  <a href="javascript:sendRequest();">点此发送邀请</a>
+</body>
+</html>
